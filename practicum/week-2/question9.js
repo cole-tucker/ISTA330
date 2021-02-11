@@ -11,7 +11,7 @@ output: 'hello'
 var suffleString = function(input, shuffleIndices) {
     var finalArray = new Array(shuffleIndices.length).fill(0);
     for (let i = 0; i < shuffleIndices.length; i++) {
-        finalArray[shuffleIndices[i]] = input[shuffleIndices[i]];
+        finalArray[shuffleIndices[i]] = input[i];
     }
     return finalArray;
 };
