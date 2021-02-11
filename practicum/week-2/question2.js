@@ -22,7 +22,7 @@ var canGetEqualCookies = function(cookies, extraCookies) {
                     return false;
                 }
             }
+            return true;
         }
-        return true;
     }
 };
