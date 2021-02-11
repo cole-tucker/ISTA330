@@ -12,7 +12,7 @@ output: [5, 5, 2, 2, 2, 2]
 var decode = function(input) {
     var arr = [];
     for (let i = 0; i < input.length; i+=2) {
-        arr.push(String(input[i + 1]).repeat(input[i]));
+        arr.push(String(input[i + 1]).repeat(input[i]).split(""));
     }
     return Array.from(arr, Number)
 };
