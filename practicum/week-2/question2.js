@@ -18,4 +18,5 @@ var canGetEqualCookies = function(cookies, extraCookies) {
         }
         extraCookies - cookiesNeeded;
     }
+    return true;
 };
