@@ -13,5 +13,5 @@ var suffleString = function(input, shuffleIndices) {
     for (let i = 0; i < shuffleIndices.length; i++) {
         finalArray[shuffleIndices[i]] = input[i];
     }
-    return finalArray;
+    return finalArray.join("");
 };
