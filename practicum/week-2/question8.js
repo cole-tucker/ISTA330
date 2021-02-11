@@ -15,8 +15,8 @@ var biggerAndEven = function(input) {
             if (input[j] > input [i] && input[j] % 2 == 0) {
                 count += 1;
             }
-            finalArray.push(count);
         }
+        finalArray.push(count);
     }
     return finalArray;
 };
