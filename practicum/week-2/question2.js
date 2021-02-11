@@ -10,7 +10,7 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
  */
 
 var canGetEqualCookies = function(cookies, extraCookies) {
-    var maxCookies = Math.max(cookies);
+    var maxCookies = Math.max.apply(Math, cookies);
     for (let i = 0; i < cookies.length; i++) {
         var cookiesNeeded = maxCookies - cookies[i];
         if (cookiesNeeded > extraCookies && cookiesNeeded >= 0) {
