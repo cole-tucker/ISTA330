@@ -13,7 +13,7 @@ The letters in A are guaranteed distinct, and all characters in A and B are lett
 var howManyCommon = function(A, B) {
     var present = 0;
     for (let i = 0; i < A.length; i++) {
-        if (A[i] in B) {
+        if (B.includes(A[i])) {
             present += 1;
         }
     }
