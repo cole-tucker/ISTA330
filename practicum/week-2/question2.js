@@ -20,5 +20,6 @@ var canGetEqualCookies = function(cookies, extraCookies) {
                 extraCookies -= 1;
             }
         }
+        return true;
     }
 };
