@@ -9,8 +9,8 @@ var median = function(input) {
     var sorted = input.sort();
     var len = sorted.length;
     if (len % 2 == 0) {
-        return (sorted[len / 2] + sorted[(len / 2) + 1]) / 2;
+        return (sorted[len / 2] + sorted[(len / 2) - 1]) / 2;
     } else {
-        return sorted[parseInt(len/2) + 1];
+        return sorted[parseInt(len/2)];
     }
 };
