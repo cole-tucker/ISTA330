@@ -18,6 +18,9 @@ var canGetEqualCookies = function(cookies, extraCookies) {
             while (cookies[i] != maxCookies) {
                 cookies[i] += 1;
                 extraCookies -= 1;
+                if (extraCookies < 0) {
+                    return false;
+                }
             }
         }
         return true;
