@@ -13,7 +13,7 @@ var canGetEqualCookies = function(cookies, extraCookies) {
     var maxCookies = Math.max(cookies);
     for (let i = 0; i < cookies.length; i++) {
         var cookiesNeeded = maxCookies - cookies[i];
-        if (cookiesNeeded > extraCookies) {
+        if (cookiesNeeded > extraCookies && cookiesNeeded >= 0) {
             return false;
         }
         extraCookies - cookiesNeeded;
