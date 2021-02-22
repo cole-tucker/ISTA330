@@ -28,4 +28,5 @@ var PascalTriangle = function(n) {
             def.push(row);
         }
     }
+    return def;
 };
