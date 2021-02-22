@@ -14,10 +14,10 @@ var F = function(n) {
     var tmp;
 
     while (n >= 0){
-      tmp = first;
-      first = first + second;
-      second = tmp;
-      num--;
+        tmp = first;
+        first = first + second;
+        second = tmp;
+        n--;
     }
   
     return second;
