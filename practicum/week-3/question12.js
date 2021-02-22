@@ -13,7 +13,7 @@ var F = function(n) {
     var second = 0;
     var tmp;
 
-    while (n >= 0){
+    while (n > 0){
         tmp = first;
         first = first + second;
         second = tmp;
