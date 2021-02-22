@@ -17,7 +17,7 @@ var d_integer = function(input) {
     for (let i = 0; i < arr.length; i++) {
         var count = 0;
         if (arr[i] === arr[i-1]) {
-            count ++;
+            count += 1;
         }
         if (count === arr.length) {
             return arr[i];
