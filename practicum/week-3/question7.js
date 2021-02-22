@@ -12,5 +12,5 @@ output: [[1,4], [2,5], [3,6]]
 */
 
 var transpose = function(M) {
-
+    return M[0].map((_, colIndex) => M.map(row => row[colIndex]));
 };

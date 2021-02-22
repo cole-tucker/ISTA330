@@ -12,5 +12,11 @@ output: 2
 */
 
 var m_element = function(input) {
-
+    var arr = input.sort();
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === arr[i+1]) {
+            return arr[i];
+        }
+    }
+    return -1;
 };

@@ -13,5 +13,15 @@ output: 3
 */
 
 var d_integer = function(input) {
-
+    var arr = input.sort();
+    for (let i = 0; i < arr.length; i++) {
+        var count = 0;
+        if (arr[i] === arr[i-1]) {
+            count ++;
+        }
+        if (count === arr.length) {
+            return arr[i];
+        }
+    }
+    return -1;
 };
