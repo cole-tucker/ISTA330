@@ -13,20 +13,24 @@ output: [
 */
 
 var PascalTriangle = function(n) {
-    // i - 1 & i
-    var def = [[1], [1,1]];
-    for (let i = 0; i < n; i++) {
-        if (n === 1) {
-            return [[1]];
-        } else if (n === 2) {
-            return [[1], [1,1]];
-        } else {
-            var row = [1];
-            for (let j = 1; j < i; j++) {
-                row.push(def[i-1][j-1] + def[i-1][j]);
+    if (n === 0) {
+        return [];
+    }
+    if (n === 1) {
+        return [[1]];
+    }
+    
+    var def = [];
+    for (let i = 1; i <= n; i++) {
+        var row = [];
+        for (let j = 0; j < i; j++) {
+            if (j === 0 || j === i - 1) {
+                row.push(1);
+            } else {
+                row.push((def[i-2][j-1] + def[i-2][j]));
             }
-            def.push(row);
         }
+        def.push(row);
     }
     return def;
 };
