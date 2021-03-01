@@ -115,9 +115,8 @@
         fdiv.innerHTML += addText;
 
         function createTable() {
-            let fdiv = document.getElementById('flowersDiv');
             fdiv.innerHTML = '';
-            let addText = '';
+            addText = '';
             addText += '<table><tr>';
             for (let i = 0; i < flowers.length / 2; i++) {
                 addText += '<td><img src=images/' + flowers[i].picture + '><p onclick="' 
@@ -135,6 +134,7 @@
             let list1 = flowers.slice(0,4);
             let list2 = flowers.slice(4,4);
             if (idx < 4) {
+                console.log(idx);
                 list1.splice(idx, 1);
                 list1.push(flower);
             } else {
