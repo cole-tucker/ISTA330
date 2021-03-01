@@ -90,7 +90,7 @@
         let rose = new Flower('Rose', 'rose.png');
         let waterlily = new Flower('Water lily', 'waterlily.png');
 
-        let flowers = [
+        var flowers = [
             daffodil,
             cherryblossom,
             lily,
@@ -127,7 +127,7 @@
                 list2.splice(idx, 1);
                 list2.push(flower);
             }
-            let flowers = list1.concat(list2);
+            flowers = list1.concat(list2);
             createTable();
         }
         createTable();
