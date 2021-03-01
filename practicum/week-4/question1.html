@@ -51,6 +51,19 @@
              rose,
              waterlily
        ];
+
+        let fdiv = document.getElementById('flowersDiv');
+        let addText = '';
+        addText += '<table><tr>';
+        for (let i = 0; i < flowers.length / 2; i++) {
+            addText += '<td><img src=images/' + flowers[i].picture + '><p>' + flowers[i].name + '</p></td>';
+        }
+        addText += '</tr><tr>';
+        for (let i = 4; i < flowers.length; i++) {
+            addText += '<td><img src=images/' + flowers[i].picture + '><p>' + flowers[i].name + '</p></td>';
+        }
+        addText += '</tr></table>';
+        fdiv.innerHTML += addText;
     </script>
 </body>
 </html>
