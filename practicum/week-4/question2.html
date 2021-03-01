@@ -135,11 +135,11 @@
             let list2 = flowers.slice(4,4);
             if (idx < 4) {
                 console.log(idx);
-                list1.splice(idx, 1);
-                list1.push(flower);
+                list1 = list1.splice(idx, 1);
+                list1 = list1.push(flower);
             } else {
-                list2.splice(idx, 1);
-                list2.push(flower);
+                list2 = list2.splice(idx, 1);
+                list2 = list2.push(flower);
             }
             flowers = list1.concat(list2);
             createTable();
