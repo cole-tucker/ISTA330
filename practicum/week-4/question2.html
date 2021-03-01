@@ -100,6 +100,36 @@
             rose,
             waterlily
         ];
+        function createTable() {
+            let fdiv = document.getElementById('flowersDiv');
+            fdiv = '';
+            let addText = '';
+            addText += '<table><tr>';
+            for (let i = 0; i < flowers.length / 2; i++) {
+                addText += '<td><img src=images/' + flowers[i].picture + '><p onclick="' 
+                    + updateList(flowers[i].name) + '">' + flowers[i].name + '</p></td>';
+            }
+            addText += '</tr><tr>';
+            for (let i = 4; i < flowers.length; i++) {
+                addText += '<td><img src=images/' + flowers[i].picture + '><p>' + flowers[i].name + '</p></td>';
+            }
+            addText += '</tr></table>';
+            fdiv.innerHTML += addText;
+        }
+        function updateList(flower) {
+            let idx = flowers.indexOf(flower);
+            let list1 = flowers.slice(0,4);
+            let list2 = flowers.slice(4,4);
+            if (idx < 4) {
+                list1.splice(idx, 1);
+                list1.push(flower);
+            } else {
+                list2.splice(idx, 1);
+                list2.push(flower);
+            }
+            createTable();
+        }
+        
     </script>
 </body>
 
